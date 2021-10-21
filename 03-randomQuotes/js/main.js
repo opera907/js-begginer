@@ -24,16 +24,15 @@ const quotes = [
         writer: "Tyne Daly"
     },
 ]
-console.log(quotes)
-const btn = document.querySelector('.btn');
-const quote = document.querySelector('.quote');
-const writer = document.querySelector('.writer');
 
-btn.addEventListener('click', generateQuote)
+//가져올 것
+const btn = document.querySelector('.btn')
+const writer = document.querySelector('.writer')
+const txt = document.querySelector('.quote')
 
-function generateQuote(){
-    let randomIndex = parseInt(Math.random() * quotes.length)
-    console.log(randomIndex)
-    quote.innerHTML = quotes[randomIndex].txt;
-    writer.innerHTML = quotes[randomIndex].writer;
-}
+btn.addEventListener('click', () => {
+    const i = Math.floor(Math.random() * quotes.length)
+
+    txt.innerHTML = quotes[i].txt
+    writer.innerHTML = quotes[i].writer
+})
