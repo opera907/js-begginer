@@ -47,6 +47,7 @@ form.addEventListener('submit', function(e) {
 
     ///33 없을때 피드백 생성
     const isValue = doFeedback(ValueBill, ValueUsers, ValueService)
+
     //44 있으면 계산 함수 실행
     // 계산 함수에서 계산된 리턴 값 받아와서
     // loader n초 실행, result 에 값 인풋
@@ -57,10 +58,21 @@ form.addEventListener('submit', function(e) {
         const resultTip = document.querySelector('#tip-amount')
         const resultToatal = document.querySelector('#total-amount')
         const resultPerson = document.querySelector('#person-amount')
-    
-        resultTip.innerHTML = calcVal[0]
-        resultToatal.innerHTML = calcVal[1]
-        resultPerson.innerHTML = calcVal[2]
+        const loader = document.querySelector('.loader')
+        const result = document.querySelector('.results')
+        loader.style.display = 'block'
+        
+        setTimeout(() => {
+            loader.style.display = 'none'
+            inputTxt()
+        }, 1000)
+
+        function inputTxt() {
+            result.style.display = "block"
+            resultTip.innerHTML = calcVal[0]
+            resultToatal.innerHTML = calcVal[1]
+            resultPerson.innerHTML = calcVal[2]
+        }
     }
 
 })

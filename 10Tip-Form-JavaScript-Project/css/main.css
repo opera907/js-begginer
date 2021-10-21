@@ -42,12 +42,12 @@ body {
   display: none;
 }
 .loader {
-  display: block; 
+  display: none; 
   /* change to none */
 }
 
 .results {
-  display: block; 
+  display: none; 
    /*change to none  */
 }
 
