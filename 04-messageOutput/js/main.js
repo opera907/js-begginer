@@ -22,7 +22,7 @@ btn.addEventListener('click', (e) => {
         // input.value 는 되고 왜 val은 안되지?
         console.log()
     }
-    //setTimeout() 은 n초동안 지속시켜주는 게 아니라 n초후에 콜백함수를 실행하는 것
+    //setTimeout() 은 n초동안 지속시켜주는 게 아니라 n초후에 콜백함수를 실행
 
 
     console.log(input.dir)
